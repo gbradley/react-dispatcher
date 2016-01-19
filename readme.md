@@ -7,10 +7,10 @@ To emit an event, a component calls emit() passing a string event type and optio
 
 	var Name = React.createClass({
 	
-		mixins : ['Dispatcher'],
+		mixins : [Dispatcher],
 		
 		render : function() {
-			return <input onClick={this.changeHandler} />;
+			return <input onChange={this.changeHandler} />;
 		},
 		
 		changeHandler : function(evt) {
@@ -26,7 +26,7 @@ To listen for an event, a component calls listen(), typically once it has mounte
 
 	var Logger = React.createClass({
 		
-		mixins : ['Dispatcher'],
+		mixins : [Dispatcher],
 		
 		componentDidMount : function() {
 			
