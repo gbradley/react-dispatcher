@@ -1,6 +1,13 @@
 /* https://github.com/gbradley/react-dispatcher */
 
-var Dispatcher = (function() {
+(function (name, context, definition) {
+  if (typeof module != 'undefined' && module.exports)
+    module.exports = definition();
+  else if (typeof define == 'function' && define.amd)
+    define(name, definition);
+  else
+    context[name] = definition();
+}('Dispatcher', this, function () {
 
 	var types = {};
 
@@ -116,4 +123,5 @@ var Dispatcher = (function() {
 			return this;
 		}
 	};
-})();
+
+});
