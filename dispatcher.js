@@ -1,3 +1,5 @@
+/* https://github.com/gbradley/react-dispatcher */
+
 var Dispatcher = (function() {
 
 	var types = {};
